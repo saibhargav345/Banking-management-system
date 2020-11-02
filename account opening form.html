@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ACCOUNT OPENING FORM</title>
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <script>
+    
+    function validate()
+        {
+            var firstname = document.getElementById("fname");
+            var lastname = document.getElementById("lname");
+            var fathername = document.getElementById("fatname");
+            var dob = document.getElementById("dob");
+            var nominee = document.getElementById("nominee");
+            var rel = document.getElementById("rel");
+            var placeofb = document.getElementById("pob");
+            var peradd = document.getElementById("peradd");
+            var number = document.getElementById("number");
+            var email = document.getElementById("email");
+            var password = document.getElementById("pass");
+            var rpassword = document.getElementById("rpass")
+            
+            if(firstname.value==""||lastname.value==""||fathername.value==""||dob.value==""||nominee.value==""||rel.value==""||placeofb.value==""||peradd.value==""||number.value==""||email.value==""||password.value=="")
+                {
+                    alert("No Blank Values Allowed");
+                }
+            else if(password.value!=rpassword.value)
+                {
+                    alert("password and re-entered password are not same");
+                }
+            else if(password.length<5||password.length>15)
+                {
+                    alert("password pattern doesn't match");
+                }
+            else
+                {
+                    alert("form submitted successfully");
+                    window.open("file:///C:/Users/91938/Downloads/website/index.html");
+                }
+                
+        }
+    </script>
+</head>
+    <body>
+    <h1>ACCOUNT OPENING FORM</h1>
+        <div class="register">
+            <h2>Register Here</h2>
+        <form method="post" id="register" action="" >
+            
+            <label>FirstName :</label><br>
+            <input type="text" name="Fname" id="fname"
+                   placeholder="Enter your first Name"><br><br>
+            <label>LastName :</label><br>
+            <input type="text" name="lname" id="lname"
+                   placeholder="Enter your last Name"><br><br>
+            <label>FatherName :</label><br>
+            <input type="text" name="Fathername" id="fatname"
+                   placeholder="Enter your father Name"><br><br>
+            <label>Date of Birth :</label><br>
+            <input type="date" name="DOB" id="dob"
+                   placeholder="Enter your Date of birth"><br><br>
+            <label>Marital status :</label><br>
+            
+            <input type="radio" name="married" id="married"><span id="merried">&nbsp; Married</span>&nbsp;&nbsp;
+            <input type="radio" name="unmarried" id="unmarried"><span id="unmarried">&nbsp; Unmarried</span>&nbsp;&nbsp;<br><br>
+            
+            <label>Gender :</label><br>
+            <input type="radio" name="male" id="male"><span id="male">&nbsp; Male</span>&nbsp;&nbsp;
+            <input type="radio" name="female" id="female"><span id="female">&nbsp; Female</span>&nbsp;&nbsp;<br><br>
+            <label>Nominee :</label><br>
+            <input type="text" name="nominne" id="nominee"
+                   placeholder="Enter the Nominee Name"><br><br>
+            <label>Relation with the nominee :</label><br>
+            <input type="text" name="rel" id="rel"
+                   placeholder="Enter the relation with the nominee"><br><br>
+            <label>Nationality :</label><br>
+            <input type="text" name="nation" id="nation"
+                   placeholder="Enter your nationality"><br><br>
+            <label>Place of birth :</label><br>
+            <input type="text" name="pob" id="pob"
+                   placeholder="Enter your place of birth"><br><br>
+            <label>Permanent address :</label><br>
+            <input type="text" name="peradd" id="peradd"
+                   placeholder="Enter your permanent address"><br><br>
+            <label>Account type :</label><br>
+            
+            <input type="radio" name="saving" id="saving"><span id="saving">&nbsp; Savings_account</span>&nbsp;&nbsp;
+            <input type="radio" name="current" id="current"><span id="current">&nbsp; Current_account</span>&nbsp;&nbsp;<br><br>
+            
+            <label>Mobile Number :</label><br>
+            <select id="ph">
+                    <option>+91</option>
+                    <option>+92</option>
+                    <option>+93</option>
+                    <option>+94</option>
+            </select>
+            <input type="number" name="MNum" id="number"
+                   placeholder="Enter your Mobile Number"><br><br>
+            
+            
+            <label>Email id :</label><br>
+            <input type="email" name="email" id="email"
+                   placeholder="Enter your Email id"><br><br>      
+            
+            <label>Password :(length sould lie between 5-15 characters)</label><br>
+            <input type="password" name="pass" id="pass" value=""
+                   placeholder="Enter your password"><br><br>
+            
+            <label>Re Enter the passeword :</label><br>
+            <input type="password" name="pass" id="rpass" value=""
+                   placeholder="Re Enter your Password"><br><br>
+            
+            <input type="submit" value="submit" onclick="validate()" id="sub">
+        </form></div>
+    </body>
+</html>

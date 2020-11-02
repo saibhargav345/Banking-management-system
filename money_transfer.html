@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MONEY TRANSFER PAGE</title>
+    <link rel="stylesheet" type="text/css" href="css/style3.css">
+    <script>
+   
+    function validate()
+        {
+            var firstname = document.getElementById("fname");
+            var lastname = document.getElementById("lname");
+            
+            var email = document.getElementById("email");
+            var password = document.getElementById("pass");
+           var rpassword = document.getElementById("rpass");
+            
+            if(firstname.value==""||lastname.value==""||email.value==""||password.value=="")
+                {
+                    alert("No Blank Values Allowed");
+                }
+            else if(password.value!=rpassword.value)
+                {
+                    alert("amount and re-entered amount are not same");
+                }
+           else if(firstname.value>9999999999||firstname.value<1000000000)
+               {
+                    alert("account number does not exist");
+                }
+         
+            else
+                {
+                    alert("Money transferred successfully");
+                    window.open("file:///C:/Users/Chaithanya/Desktop/website/index.html");
+                }
+                
+        }
+    </script>
+</head>
+    <body>
+    <h1>MONEY TRANSFER</h1>
+        <div class="register">
+            <h2>ENTER THE DETAILS</h2>
+        <form method="post" id="register" action="" >
+            
+            <label>account number (acc_no. must contain 10 digits):</label><br>
+            <input type="number" name="Fname" id="fname"
+                   placeholder="Enter your accountnumber"><br><br>
+            <label>account holder name :</label><br>
+            <input type="text" name="lname" id="lname"
+                   placeholder="Enter your Name"><br><br>
+    
+            <label>ifsc code :</label><br>
+            <input type="text" name="email" id="email"
+                   placeholder="Enter ifsc code"><br><br>      
+            
+            <label>Amount</label><br>
+            <input type="number" name="pass" id="pass" value=""
+                   placeholder="Enter the amount"><br><br>
+            <label>re enter the Amount</label><br>
+            <input type="number" name="rpass" id="rpass" value=""
+                   placeholder="enter the amount"><br><br>
+            
+            <input type="submit" value="submit" onclick="validate()" id="sub">
+        </form></div>
+    </body>
+</html>
