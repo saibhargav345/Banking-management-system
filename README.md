@@ -1,1 +1,5 @@
 # Banking-management-system
+The “banking management system” keeps the day to day tally record of the bank. It can keep the information of account type , account opening form , deposit , withdrawal , and transaction report along with each and every transaction details .
+In this 21st century the banks play a significant role in handling the wealth of the people as well as the organization. due to globalization banking industry has completely changed. Many number of banks are being established in various countries. This is because of the increase in banking customers ,  and increase in the number of transactions.
+Now-a-days, most of the transactions have become electronic and enables their customers to made transactions via internet without going to a bank. So, today successful banks are maintaining their customer databases which are running into crores.
+In the existing banking system the transactions are done only manually but in our proposed banking management system we have to computerize all the banking transactions using the software banking system.
